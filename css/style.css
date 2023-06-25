@@ -1,0 +1,159 @@
+* {
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    list-style: none;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+    font-family: 'poppins';
+}
+
+.navbar {
+    background-color: black;
+    display: flex;
+    justify-content: space-between;
+}
+
+.navbar a {
+    color: white;
+}
+
+.navbar .logo {
+    text-decoration: none;
+    font-size: 1.5cm;
+    font-weight: bold;
+}
+
+.navbar .nav-links ul {
+    display: flex;
+    margin-top: 30px;
+}
+
+.navbar .nav-links ul li {
+    margin: 0 25px;
+}
+
+.navbar .nav-links ul li.active a {
+
+    color: red;
+    font-weight: 600;
+}
+
+.navbar .menu-hamburger {
+    display: none;
+    position: absolute;
+    top: 50px;
+    right: 30px;
+    width: 35px;
+}
+
+.mobile-menu {
+    margin-left: 0;
+}
+@media screen and (max-width: 768px) {
+    .navbar {
+        padding: 0;
+    }
+
+    .navbar .logo {
+        position: absolute;
+        top: 15px;
+        left: 40px;
+    }
+
+    .navbar .menu-hamburger {
+        display: block;
+        position: absolute; /* Añadido */
+        z-index: 999; /* Añadido */
+    }
+
+    .nav-links {
+        top: 0;
+        left: 0;
+        position: absolute;
+        background-color: rgba(255, 255, 255, 0.20);
+        backdrop-filter: blur(8px);
+        width: 100%;
+        height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-left: -100%;
+        transition: all 0.5s ease;
+        z-index: 998; /* Añadido */
+    }
+
+    .nav-links.mobile-menu {
+        margin-left: 0;
+    }
+
+    .nav-links ul {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .navbar .nav-links ul li {
+        margin: 25px 0;
+        font-size: 1.2cm;
+    }
+}
+
+
+/*Footer*/
+footer {
+    background-color: #000000;
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    color: aliceblue;
+}
+
+.column {
+    flex: 1;
+    margin-right: 20px;
+}
+
+h3 {
+    font-size: 16px;
+    margin-bottom: 10px;
+}
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+ul li {
+    margin-bottom: 5px;
+}
+
+ul li a {
+    color: #666;
+    text-decoration: none;
+}
+
+.footer-bottom {
+    margin-top: 20px;
+    text-align: center;
+    color: #969696;
+}
+
+/* Estilos para dispositivos móviles */
+@media screen and (max-width: 768px) {
+    footer {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        align-items: flex-start;
+    }
+
+    .column {
+        flex: 1 1 100%;
+        margin-bottom: 20px;
+    }
+}

@@ -1,0 +1,76 @@
+header {
+    height: 100vh;
+    width: 100vw;
+    background-image: url(../assets/images/02_image.jpg);
+    background-size: cover;
+}
+/*Centro*/
+.centro h2{
+  text-align: center;
+}
+.centro p{
+  text-align: center;
+}
+.centro {
+  margin-top: 50px;
+  margin-bottom: 50px;
+}
+
+/*4 cards*/
+
+
+/*carrusel*/
+.carousel {
+  position: relative;
+  width: 600px;
+  height: 400px;
+  margin: 0 auto;
+  overflow: hidden;
+}
+
+.carousel img {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  transition: opacity 1s ease-in-out;
+}
+
+.carousel img.active {
+  opacity: 1;
+}
+
+.carousel-indicators {
+  display: flex;
+  justify-content: center;
+  margin-top: 10px;
+}
+
+.carousel-indicators li {
+  list-style: none;
+  margin: 0 5px;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background-color: gray;
+  cursor: pointer;
+}
+
+.carousel-indicators li.active {
+  background-color: black;
+}
+/*bootstrap*/
+.seccion_3{
+  text-align: center;
+}
+.seccion_2{
+  text-align: center;
+}
+.card {
+  display: inline-block;
+  margin-right: 10px;
+}
+
+.card:last-child {
+  margin-right: 0;
+}
